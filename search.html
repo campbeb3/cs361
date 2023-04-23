@@ -7,17 +7,15 @@
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <P align="left">
-        <a href="index.html">
-            <img class="button" src="images/Back.png" alt=""/>
-        </a>
-    </P>
+  <div title="Back button">
+    <a href="index.html"><img class="button" src="images/Back.png"></a></div>
   <br><br>
   <img src="images/CrimeTrackerLogo.png"><br>
   <br><br>
-  <label for="input-state">State: </label>
+  <label for="input-state">Select State: </label>
   <div class="dropdown"></div>
   <select>
+    <option value=""></option>
     <option value="AL">Alabama</option>
     <option value="AK">Alaska</option>
     <option value="AZ">Arizona</option>
@@ -72,10 +70,11 @@
   </select>
   </div>
   <br><br>
-  <label for="crime-filter">Filter by types of crime:</label>
+  <label for="crime-filter">Select Crime:</label>
   <div class="dropdown">
       <select>
-          <option class ="opt-box" value="All">Total Crime</option>
+        <option class ="opt-box" value=""></option>
+          <option class ="opt-box" value="All">All Crime</option>
           <option class ="opt-box" value="Assault">Assault</option>
           <option class ="opt-box" value="Burglary">Burglary</option>
           <option class ="opt-box" value="Larceny">Larceny</option>
@@ -85,12 +84,16 @@
           <option class ="opt-box" value="Robery">Robbery</option>
       </select>
   </div>
-  <br>
-  <a href="results.html">
-    <img class="button" src="images/Search_button.png" alt=""/>
-  </a>
+  <br><br>
+  <div title="Click here to Search">
+    <a href="results.html">
+      <input class="button" value="Search">
+    </a>
+    </div>
   <br><br><br><br>
+  <div title="More information">
   <a href="https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019"><img src="images/FBI.png"></a><br>
+  </div>
   <br><br><br><br>
 
   <a href="index.html"><img src="images/Home_icon.png"></a><a href="search.html"><img src="images/Search_Search.png"></a><a href="results.html"><img src="images/Results_icon.png"></a><a href="results_list.html"><img src="images/List_icon.png"></a>
