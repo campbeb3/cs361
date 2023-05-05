@@ -1,1 +1,665 @@
-
+[
+    {
+    "State": "Alabama",
+    "Crime": {
+        "All": 131133,
+        "Burglary": 26079,
+        "Larceny": 92477,
+        "Motor": 12577,
+        "Assault": 18679,
+        "Murder": 358,
+        "Rape": 2068,
+        "Robbery": 3941
+        }
+    },
+    {
+    "State": "Alaska",
+    "Crime": {
+        "All": 21294,
+        "Burglary": 3563,
+        "Larceny": 15114,
+        "Motor": 2617,
+        "Assault": 4360,
+        "Murder": 69,
+        "Rape": 1088,
+        "Robbery": 826
+        }
+    },
+    {
+    "State": "Arizona",
+    "Crime": {
+        "All": 177638,
+        "Burglary": 28699,
+        "Larceny": 130788,
+        "Motor": 18151,
+        "Assault": 22704,
+        "Murder": 365,
+        "Rape": 3662,
+        "Robbery": 6410
+        }
+    },
+    {
+    "State": "Arkansas",
+    "Crime": {
+        "All": 86250,
+        "Burglary": 18095,
+        "Larceny": 60735,
+        "Motor": 7420,
+        "Assault": 13513,
+        "Murder": 242,
+        "Rape": 2331,
+        "Robbery": 1557
+        }
+    },
+    {
+    "State": "California",
+    "Crime": {
+        "All": 921114,
+        "Burglary": 152555,
+        "Larceny": 626802,
+        "Motor": 141757,
+        "Assault": 105541,
+        "Murder": 1690,
+        "Rape": 14799,
+        "Robbery": 52301
+        }
+    },
+    {
+    "State": "Colorado",
+    "Crime": {
+        "All": 149189,
+        "Burglary": 20064,
+        "Larceny": 107012,
+        "Motor": 22113,
+        "Assault": 14185,
+        "Murder": 218,
+        "Rape": 3872,
+        "Robbery": 3663
+        }
+    },
+    {
+    "State": "Connecticut",
+    "Crime": {
+        "All": 50862,
+        "Burglary": 6441,
+        "Larceny": 38457,
+        "Motor": 5964,
+        "Assault": 3742,
+        "Murder": 104,
+        "Rape": 771,
+        "Robbery": 1929
+        }
+    },
+    {
+    "State": "Delaware",
+    "Crime": {
+        "All": 21931,
+        "Burglary": 2968,
+        "Larceny": 17359,
+        "Motor": 1604,
+        "Assault": 2967,
+        "Murder": 48,
+        "Rape": 310,
+        "Robbery": 790
+        }
+    },
+    {
+    "State": "District of Columbia",
+    "Crime": {
+        "All": 30821,
+        "Burglary": 1843,
+        "Larceny": 26645,
+        "Motor": 2333,
+        "Assault": 4179,
+        "Murder": 166,
+        "Rape": 345,
+        "Robbery": 2713
+        }
+    },
+    {
+    "State": "Florida",
+    "Crime": {
+        "All": 460846,
+        "Burglary": 63396,
+        "Larceny": 358402,
+        "Motor": 39048,
+        "Assault": 55475,
+        "Murder": 1122,
+        "Rape": 8456,
+        "Robbery": 16217
+        }
+    },
+    {
+    "State": "Georgia",
+    "Crime": {
+        "All": 252249,
+        "Burglary": 39506,
+        "Larceny": 188967,
+        "Motor": 23776,
+        "Assault": 24633,
+        "Murder": 654,
+        "Rape": 2922,
+        "Robbery": 7961
+        }
+    },
+    {
+    "State": "Hawaii",
+    "Crime": {
+        "All": 40228,
+        "Burglary": 5340,
+        "Larceny": 29634,
+        "Motor": 5254,
+        "Assault": 2098,
+        "Murder": 48,
+        "Rape": 765,
+        "Robbery": 1131
+        }
+    },
+    {
+    "State": "Idaho",
+    "Crime": {
+        "All": 21793,
+        "Burglary": 3927,
+        "Larceny": 16295,
+        "Motor": 1571,
+        "Assault": 3001,
+        "Murder": 35,
+        "Rape": 809,
+        "Robbery": 155
+        }
+    },
+    {
+    "State": "Illinois",
+    "Crime": {
+        "All": 233984,
+        "Burglary": 34433,
+        "Larceny": 180776,
+        "Motor": 18775,
+        "Assault": 32187,
+        "Murder": 832,
+        "Rape": 6078,
+        "Robbery": 12464
+        }
+    },
+    {
+    "State": "Indiana",
+    "Crime": {
+        "All": 132694,
+        "Burglary": 21795,
+        "Larceny": 97176,
+        "Motor": 13723,
+        "Assault": 16783,
+        "Murder": 377,
+        "Rape": 2475,
+        "Robbery": 5331
+        }
+    },
+    {
+    "State": "Iowa",
+    "Crime": {
+        "All": 54699,
+        "Burglary": 11710,
+        "Larceny": 37847,
+        "Motor": 5142,
+        "Assault": 6323,
+        "Murder": 60,
+        "Rape": 1164,
+        "Robbery": 863
+        }
+    },
+    {
+    "State": "Kansas",
+    "Crime": {
+        "All": 67428,
+        "Burglary": 9984,
+        "Larceny": 50165,
+        "Motor": 7279,
+        "Assault": 9154,
+        "Murder": 105,
+        "Rape": 1416,
+        "Robbery": 1293
+        }
+    },
+    {
+    "State": "Kentucky",
+    "Crime": {
+        "All": 84769,
+        "Burglary": 15443,
+        "Larceny": 59130,
+        "Motor": 10196,
+        "Assault": 5747,
+        "Murder": 221,
+        "Rape": 1572,
+        "Robbery": 2161
+        }
+    },
+    {
+    "State": "Louisiana",
+    "Crime": {
+        "All": 146993,
+        "Burglary": 26918,
+        "Larceny": 109359,
+        "Motor": 10716,
+        "Assault": 18695,
+        "Murder": 544,
+        "Rape": 2273,
+        "Robbery": 4025
+        }
+    },
+    {
+    "State": "Maine",
+    "Crime": {
+        "All": 16743,
+        "Burglary": 2350,
+        "Larceny": 13667,
+        "Motor": 726,
+        "Assault": 824,
+        "Murder": 20,
+        "Rape": 516,
+        "Robbery": 188
+        }
+    },
+    {
+    "State": "Maryland",
+    "Crime": {
+        "All": 117901,
+        "Burglary": 16862,
+        "Larceny": 89780,
+        "Motor": 11259,
+        "Assault": 15798,
+        "Murder": 542,
+        "Rape": 1913,
+        "Robbery": 9203
+        }
+    },
+    {
+    "State": "Massachusetts",
+    "Crime": {
+        "All": 81317,
+        "Burglary": 12341,
+        "Larceny": 62844,
+        "Motor": 6132,
+        "Assault": 16609,
+        "Murder": 152,
+        "Rape": 2204,
+        "Robbery": 3613
+        }
+    },
+    {
+    "State": "Michigan",
+    "Crime": {
+        "All": 158296,
+        "Burglary": 28572,
+        "Larceny": 111980,
+        "Motor": 17744,
+        "Assault": 30545,
+        "Murder": 556,
+        "Rape": 7235,
+        "Robbery": 5350
+        }
+    },
+    {
+    "State": "Minnesota",
+    "Crime": {
+        "All": 117236,
+        "Burglary": 15927,
+        "Larceny": 90092,
+        "Motor": 11217,
+        "Assault": 7618,
+        "Murder": 117,
+        "Rape": 2448,
+        "Robbery": 3149
+        }
+    },
+    {
+    "State": "Mississippi",
+    "Crime": {
+        "All": 70707,
+        "Burglary": 18660,
+        "Larceny": 46300,
+        "Motor": 5747,
+        "Assault": 5493,
+        "Murder": 332,
+        "Rape": 747,
+        "Robbery": 1700
+        }
+    },
+    {
+    "State": "Missouri",
+    "Crime": {
+        "All": 161946,
+        "Burglary": 26414,
+        "Larceny": 114460,
+        "Motor": 21072,
+        "Assault": 21936,
+        "Murder": 568,
+        "Rape": 2917,
+        "Robbery": 4959
+        }
+    },
+    {
+    "State": "Montana",
+    "Crime": {
+        "All": 23440,
+        "Burglary": 2887,
+        "Larceny": 18176,
+        "Motor": 2377,
+        "Assault": 3472,
+        "Murder": 27,
+        "Rape": 624,
+        "Robbery": 205
+        }
+    },
+    {
+    "State": "Nebraska",
+    "Crime": {
+        "All": 39449,
+        "Burglary": 4745,
+        "Larceny": 29719,
+        "Motor": 4985,
+        "Assault": 3731,
+        "Murder": 45,
+        "Rape": 1253,
+        "Robbery": 792
+        }
+    },
+    {
+    "State": "Nevada",
+    "Crime": {
+        "All": 71525,
+        "Burglary": 15510,
+        "Larceny": 44755,
+        "Motor": 11260,
+        "Assault": 9620,
+        "Murder": 143,
+        "Rape": 2161,
+        "Robbery": 3286
+        }
+    },
+    {
+    "State": "New Hampshire",
+    "Crime": {
+        "All": 16442,
+        "Burglary": 1717,
+        "Larceny": 13832,
+        "Motor": 893,
+        "Assault": 1138,
+        "Murder": 33,
+        "Rape": 590,
+        "Robbery": 313
+        }
+    },
+    {
+    "State": "New Jersey",
+    "Crime": {
+        "All": 118637,
+        "Burglary": 16399,
+        "Larceny": 91902,
+        "Motor": 10336,
+        "Assault": 10852,
+        "Murder": 262,
+        "Rape": 1531,
+        "Robbery": 5730
+        }
+    },
+    {
+    "State": "New Mexico",
+    "Crime": {
+        "All": 65269,
+        "Burglary": 14610,
+        "Larceny": 41702,
+        "Motor": 8957,
+        "Assault": 13640,
+        "Murder": 181,
+        "Rape": 1288,
+        "Robbery": 2341
+        }
+    },
+    {
+    "State": "New York",
+    "Crime": {
+        "All": 267155,
+        "Burglary": 27600,
+        "Larceny": 226851,
+        "Motor": 12704,
+        "Assault": 44555,
+        "Murder": 558,
+        "Rape": 6583,
+        "Robbery": 18068
+        }
+    },
+    {
+    "State": "North Carolina",
+    "Crime": {
+        "All": 247236,
+        "Burglary": 54447,
+        "Larceny": 174728,
+        "Motor": 18061,
+        "Assault": 27517,
+        "Murder": 632,
+        "Rape": 3247,
+        "Robbery": 7599
+        }
+    },
+    {
+    "State": "North Dakota",
+    "Crime": {
+        "All": 15066,
+        "Burglary": 2608,
+        "Larceny": 10666,
+        "Motor": 1792,
+        "Assault": 1529,
+        "Murder": 24,
+        "Rape": 437,
+        "Robbery": 179
+        }
+    },
+    {
+    "State": "Ohio",
+    "Crime": {
+        "All": 240291,
+        "Burglary": 43894,
+        "Larceny": 177725,
+        "Motor": 18672,
+        "Assault": 19154,
+        "Murder": 538,
+        "Rape": 5731,
+        "Robbery": 8846
+        }
+    },
+    {
+    "State": "Oklahoma",
+    "Crime": {
+        "All": 112587,
+        "Burglary": 26577,
+        "Larceny": 72632,
+        "Motor": 13378,
+        "Assault": 12183,
+        "Murder": 266,
+        "Rape": 2268,
+        "Robbery": 2369
+        }
+    },
+    {
+    "State": "Oregon",
+    "Crime": {
+        "All": 115170,
+        "Burglary": 14724,
+        "Larceny": 85261,
+        "Motor": 15185,
+        "Assault": 7825,
+        "Murder": 116,
+        "Rape": 1778,
+        "Robbery": 2276
+        }
+    },
+    {
+    "State": "Pennsylvania",
+    "Crime": {
+        "All": 179665,
+        "Burglary": 23354,
+        "Larceny": 143921,
+        "Motor": 12390,
+        "Assault": 24465,
+        "Murder": 669,
+        "Rape": 4351,
+        "Robbery": 9743
+        }
+    },
+    {
+    "State": "Rhode Island",
+    "Crime": {
+        "All": 16259,
+        "Burglary": 2321,
+        "Larceny": 12580,
+        "Motor": 1358,
+        "Assault": 1408,
+        "Murder": 25,
+        "Rape": 491,
+        "Robbery": 418
+        }
+    },
+    {
+    "State": "South Carolina",
+    "Crime": {
+        "All": 151389,
+        "Burglary": 27461,
+        "Larceny": 108953,
+        "Motor": 14975,
+        "Assault": 20105,
+        "Murder": 464,
+        "Rape": 2460,
+        "Robbery": 3294
+        }
+    },
+    {
+    "State": "South Dakota",
+    "Crime": {
+        "All": 15667,
+        "Burglary": 2646,
+        "Larceny": 11265,
+        "Motor": 1756,
+        "Assault": 2676,
+        "Murder": 17,
+        "Rape": 642,
+        "Robbery": 195
+        }
+    },
+    {
+    "State": "Tennessee",
+    "Crime": {
+        "All": 181153,
+        "Burglary": 29869,
+        "Larceny": 132104,
+        "Motor": 19180,
+        "Assault": 31186,
+        "Murder": 498,
+        "Rape": 2813,
+        "Robbery": 6150
+        }
+    },
+    {
+    "State": "Texas",
+    "Crime": {
+        "All": 693204,
+        "Burglary": 113902,
+        "Larceny": 501813,
+        "Motor": 77489,
+        "Assault": 76253,
+        "Murder": 1409,
+        "Rape": 14824,
+        "Robbery": 28988
+        }
+    },
+    {
+    "State": "Utah",
+    "Crime": {
+        "All": 69546,
+        "Burglary": 8871,
+        "Larceny": 53937,
+        "Motor": 6738,
+        "Assault": 4534,
+        "Murder": 72,
+        "Rape": 1822,
+        "Robbery": 1125
+        }
+    },
+    {
+    "State": "Vermont",
+    "Crime": {
+        "All": 8888,
+        "Burglary": 1275,
+        "Larceny": 7315,
+        "Motor": 298,
+        "Assault": 902,
+        "Murder": 11,
+        "Rape": 278,
+        "Robbery": 71
+        }
+    },
+    {
+    "State": "Virginia",
+    "Crime": {
+        "All": 140213,
+        "Burglary": 13900,
+        "Larceny": 116044,
+        "Motor": 10269,
+        "Assault": 10987,
+        "Murder": 426,
+        "Rape": 2816,
+        "Robbery": 3524
+        }
+    },
+    {
+    "State": "Washington",
+    "Crime": {
+        "All": 204224,
+        "Burglary": 34540,
+        "Larceny": 145282,
+        "Motor": 24402,
+        "Assault": 13700,
+        "Murder": 198,
+        "Rape": 3332,
+        "Robbery": 5147
+        }
+    },
+    {
+    "State": "West Virginia",
+    "Crime": {
+        "All": 28376,
+        "Burglary": 5891,
+        "Larceny": 20066,
+        "Motor": 2419,
+        "Assault": 4464,
+        "Murder": 78,
+        "Rape": 754,
+        "Robbery": 378
+        }
+    },
+    {
+    "State": "Wisconsin",
+    "Crime": {
+        "All": 85672,
+        "Burglary": 12667,
+        "Larceny": 65620,
+        "Motor": 7385,
+        "Assault": 11643,
+        "Murder": 175,
+        "Rape": 2261,
+        "Robbery": 2991
+        }
+    },
+    {
+    "State": "Wyoming",
+    "Crime": {
+        "All": 9093,
+        "Burglary": 1396,
+        "Larceny": 6984,
+        "Motor": 713,
+        "Assault": 854,
+        "Murder": 13,
+        "Rape": 324,
+        "Robbery": 67
+        }
+    }
+    ]
