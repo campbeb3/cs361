@@ -1,0 +1,110 @@
+<!DOCState html>
+<html>
+<head>
+    <title>CrimeTracker-Search</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div title="Back button">
+    <a href="/"><img class="button" src="./img/Back.png"></a></div>
+    <br><br>
+    <img src="./img/CrimeTrackerLogo.png"><br>
+    <br><br>
+    <p>
+        <label for="state-filter">Select State:</label><br>
+        <select id='sel'>
+            <option value=''>-- Select --</option>
+        </select>
+    </p>
+
+    <label for="crime-filter">Select Crime:</label>
+  <div class="dropdown">
+      <select>
+        <option class ="opt-box" value=""></option>
+          <option class ="opt-box" value="All">All Crime</option>
+          <option class ="opt-box" value="Assault">Assault</option>
+          <option class ="opt-box" value="Burglary">Burglary</option>
+          <option class ="opt-box" value="Larceny">Larceny</option>
+          <option class ="opt-box" value="Murder">Murder</option>
+          <option class ="opt-box" value="Motor">Motor Vehicle Theft</option>
+          <option class ="opt-box" value="Rape">Rape</option>
+          <option class ="opt-box" value="Robery">Robbery</option>
+      </select>
+  </div>
+  <br><br>
+  <div title="Click here to Search">
+    <a href="/results">
+      <input class="button" value="Search">
+    </a>
+    </div>
+
+    <p>
+        <label for="crime-filter">Select Crime:</label><br>
+        <select id='sel1'>
+            <option value=''>-- Select --</option>
+        </select>
+    </p>
+</body>
+
+<script>
+    $(document).ready(function () {
+
+    let arrData = [];
+    
+  	// Fill the first dropdown with data.
+    $.getJSON('./json/state_crime.json', function (data) {
+
+    
+        let arr_State = [];
+
+        $.each(data, function (index, value) {
+            arr_State.push(value.State);
+            arrData = data;
+        });
+
+        // Remove duplicates. We want unique States.
+        arr_State = Array.from(new Set (arr_State));
+        
+        // ref (https://www.encodedna.com/javascript/remove-duplicates-in-javascript-array-using-es6-set-and-from.htm)
+
+        $.each(arr_State, function (index, value) {
+            // Fill the first dropdown with unique States.
+            $('#sel').append('<option value="' + value + '">' + value + '</option>');
+        });
+                
+    });
+    
+    $('#sel').change(function () {
+        let State = this.options[this.selectedIndex].value;
+
+        let filterData = arrData.filter(function(value) {
+            return value.State === State;
+        });
+
+        $('#sel1')
+            .empty()
+            .append('<option value=""> -- Select Crime -- </option>');
+        $.each(filterData, function (index, value) {
+            // Now, fill the second dropdown list with Crimes.
+            //$('#sel1').append('<option value="' + value.ID + '">' + value.Name + '</option>');//"undefined"
+            //$('#sel1').append('<option value="' + value.Crime + '">' + value.Crime + '</option>'); //[objectObject]
+            $('#sel1').append('<option value="' + value + '">' + value.Crime.All + '</option>'); //"undefined" //"131133"
+            //$('#sel1').append('<option value="' + value + '">' + value.State.value + '</option>'); //"undefined"
+            //$('#sel1').append('<option value="' + value.State + '">' + value.State + '</option>'); //"Alabama"
+            //$('#sel1').append('<option value="' + value.State + '">' + value.Crime + '</option>'); ////[objectObject]
+        });
+        
+    });
+  });
+</script>
+
+  <br><br><br><br>
+  <div title="More information">
+  <a href="https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019"><img src="./img/FBI.png"></a><br>
+  </div>
+  <br><br><br><br>
+
+  <a href="/"><img src="./img/Home_icon.png"></a><a href="/search"><img src="./img/Search_Search.png"></a><a href="/results"><img src="./img/Results_icon.png"></a><a href="/results_list"><img src="./img/List_icon.png"></a>
+</body>
+</html>
