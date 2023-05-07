@@ -5,7 +5,7 @@ CS361 - Spring 2023
 campbeb3
 Group32 - Microsevice
 
-Microservice Website location (for partner link to): 
+Microservice Website location (for partner to link to): 
 http://flip2.engr.oregonstate.edu:54545/
 
 Brian's Project Website location:
