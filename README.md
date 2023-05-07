@@ -5,8 +5,11 @@ CS361 - Spring 2023
 campbeb3
 Group32 - Microsevice
 
-Website location: 
+Microservice Website location (for partner link to): 
 http://flip2.engr.oregonstate.edu:54545/
+
+Brian's Project Website location:
+http://flip2.engr.oregonstate.edu:54555/
 
 JSON Source: https://corgis-edu.github.io/corgis/json/state_crime/
 
