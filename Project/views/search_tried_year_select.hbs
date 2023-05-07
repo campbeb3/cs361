@@ -1,0 +1,104 @@
+<!DOCState html>
+<html>
+<head>
+    <title>CrimeTracker-Search</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script href="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div title="Back button">
+    <a href="/"><img class="button" src="./img/Back.png"></a></div>
+    <br><br>
+    <img src="./img/CrimeTrackerLogo.png"><br>
+    <br><br>
+    <p>
+        <label for="state-filter">Select State:</label><br>
+        <select id='sel'>
+            <option value=''>-- Select --</option>
+        </select>
+    </p>
+    <p>
+        <label for="year-filter">Select Year:</label><br>
+        <select id='sel1'>
+            <option value=''>-- Select --</option>
+        </select>
+    </p>
+    <p>
+        <label for="crime-filter">Violent Crimes:</label><br>
+        <select id='sel2'>
+            <option value=''></option>
+        </select>
+    </p>
+        <p>
+        <label for="crime-filter">Property Crimes:</label><br>
+        <select id='sel3'>
+            <option value=''></option>
+        </select>
+    </p>
+</body>
+
+
+<script>
+$(document).ready(function () {
+    let arrData = [];
+
+  	// Fill the first dropdown with data.
+    $.getJSON('./json/state_crime.json', function (data) {
+
+    let arr_State = [];
+    let arr_Year = [];
+
+    $.each(data, function (index, value) {
+        arr_State.push(value.State);
+        arr_Year.push(value.Year);
+    });
+
+    arr_State = Array.from(new Set(arr_State));
+    arr_Year = Array.from(new Set(arr_Year));
+
+    $.each(arr_State, function (index, value) {
+        $('#sel').append('<option value="' + value + '">' + value + '</option>');
+    });
+
+    $.each(arr_Year, function (index, value) {
+        $('#sel1').append('<option value="' + value + '">' + value + '</option>');
+    });
+});
+    $('#sel').change(function () {
+        let State = this.options[this.selectedIndex].value;
+
+        $('#sel1').change(function () {
+            let Year = this.options[this.selectedIndex].value;
+
+            let filterStateYear = arrData.filter(function(value) {
+                return value.State === State;
+                return value.Year === Year;
+            });
+            
+            $('#sel2').empty().append('<option value=""></option>');
+            $.each(filterStateYear, function (index, value) {
+            // Now, fill the third box with Violent Crimes & numbers.
+            $('#sel2').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Violent) + '</option>');
+            });
+            $('#sel3').empty().append('<option value=""></option>');
+            $.each(filterStateYear, function (index, value) {
+            // Now, fill the forth box with Property Crimes & numbers.
+            $('#sel3').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Property) + '</option>');
+        });
+            console.log(State);
+            console.log(Year);
+        });
+    });
+});
+</script>
+
+  <br><br><br><br>
+  <div title="Data Source">
+  <a href="https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019"><img src="./img/FBI.png"></a><br>
+  </div>
+  <br><br><br><br>
+
+  <a href="/"><img src="./img/Home_icon.png"></a><a href="/search"><img src="./img/Search_Search.png"></a><a href="/results"><img src="./img/Results_icon.png"></a><a href="/results_list"><img src="./img/List_icon.png"></a>
+</html>
