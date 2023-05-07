@@ -1,1 +1,267 @@
+/* CSS Document */
+body 
+{
+    backdrop-filter: blur(5px);
+    background-size: cover;
+    background-color:white;
+    border-radius:10px;
+    font-family: 'Font Name', Cambria;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: scroll;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  body h1
+  {
+    background-color:white;
+    border-radius:10px;
+    margin-left: 500px;
+    margin-right: 500px;
+    font-family: 'Font Name', Cambria;
+    color: orangered;
+  }
 
+  h2 
+  {
+    background-color:white;
+    margin-left: center;
+    margin-right: center;
+  }
+  
+  h3 
+  {
+    background-color:white;
+    margin-left: center;
+    margin-right: center;
+    text-align: center;
+    vertical-align:middle;
+  }
+  
+  h3 a:hover 
+  {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:10px;
+    color: black;
+    cursor: pointer;
+    border:2px solid black;
+    font: size 1.2em;
+    font-weight:bold;
+    margin-right: 2px;
+    padding: 5px 25px 5px 25px;
+    text-align: center;
+    vertical-align:middle;
+  }
+
+  input, button, select 
+  {
+    font-family: "American Typewriter", sans-serif;
+    font-style: bold;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background-color: rgb(9, 247, 255);
+  }
+  
+  /* --------Navigation-------- */
+  
+  nav 
+  {
+    border-radius:10px;
+    font-weight:bold;
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+  }
+  
+  nav a 
+  {
+    background-color:yellow;
+    color:black;
+    border:2px solid black;
+    border-radius:10px;
+    font: size 1.2em;
+    font-weight:bold;
+    margin-right: 2px;
+    padding: 5px 25px 5px 25px;
+    text-decoration:dotted;
+    text-align: center;
+    vertical-align:middle;
+    align-self: center;
+  }
+  
+  nav a:hover 
+  {
+    background-color:coral;
+    border-radius:10px;
+    color: black;
+    cursor: pointer;
+    border:2px solid black;
+    font: size 1.2em;
+    font-weight:bold;
+    margin-right: 2px;
+    padding: 5px 25px 5px 25px;
+    width: auto;
+    text-align: center;
+    vertical-align:middle;
+    align-self: center;
+  }
+  
+  footer 
+  {
+    clear: both;
+    position: relative;
+    margin-top: 200px;
+    color: rgb(248, 149, 1);
+    font: size 1.2em;
+    font-weight:bold;
+  }
+
+  
+  /* -------Table------- */
+  
+  table 
+  {
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align:middle;
+    width: auto;
+  }
+  
+  td, th 
+  {
+    background-color: rgb(248, 185, 163);
+    border: 1px inset red;
+    border-radius:5px;
+    color: black;
+    padding: auto;
+    text-align: center;
+  }
+  
+  tr:nth-child(even){background-color: white}
+  tr th 
+  {
+    background-color: rgb(9, 247, 255);
+    color: #253529;
+    border-radius:5px;
+    font-style: bold;
+    font-weight: bold;
+    padding-bottom: 5x;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  
+  .App 
+  {
+    text-align: center;
+    border-radius:10px;
+    margin: auto;
+    
+  }
+
+  /* -------Form------- */
+  
+  form 
+  {
+    background-color: rgb(248, 185, 163);
+    margin-left: 20px;
+    margin-right: 80px;
+    border-radius:5px;
+    border:2px solid black;
+    vertical-align:middle;
+    padding: 5px 25px 5px 25px;
+    width: auto;
+    color: black;
+  }
+  
+  textarea 
+  {
+    overflow: auto;
+  }
+  
+  input 
+  {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:rgb(9, 247, 255);
+    padding: 5px 2em;
+    font-weight: bold;
+    color: black;
+  }
+  
+  input:hover 
+  {
+    background-color: yellow;
+  }
+  
+  button 
+  {
+    background-color:yellow;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 150px;
+  }
+  
+  button:hover 
+  {
+    background-color: coral;
+    border-radius: 20px;
+  }
+
+  /* --------Map--------*/
+  /* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ * https://developers.google.com/maps/documentation/javascript/examples/control-custom-state#maps_control_custom_state-css
+ */
+#map {
+  height: 50%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#goCenterUI,
+#setCenterUI {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  float: left;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+#goCenterText,
+#setCenterText {
+  color: rgb(25, 25, 25);
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#setCenterUI {
+  margin-left: 12px;
+}
