@@ -16,6 +16,7 @@ JSON Source: https://corgis-edu.github.io/corgis/json/state_crime/
 Communication Contract:
 
 REQUEST DATA METHOD:
+
 Partner can access Microservice by adding this flip server link to their project: http://flip2.engr.oregonstate.edu:54545/
 Alternatively, if parnter wants to add web build to their project, these are the steps I used:
 
@@ -29,3 +30,10 @@ Step 3: Copy over any needed files (JSON, index.hbs, etc) from this Gitbub accou
 
 RECEIVE DATA METHOD:
 
+To find Crime data for 2019, the user first selects "State" from drop-down list
+
+The index.hbs file then retreives the Total Crime numbers using KEYS (example key: "Data.Totals.Violent.Assault") 
+
+The data is parsed and displayed on website TABLE for user to reference
+
+Selecting a different State will repopulate table with new data
