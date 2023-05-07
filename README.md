@@ -36,6 +36,6 @@ To find Crime data for 2019, the user first selects "State" from drop-down list
 
 The index.hbs file then retreives the Total Crime numbers using KEYS (example key: "Data.Totals.Violent.Assault") 
 
-The data is parsed and displayed on website TABLE for user to reference
+The data is filtered and displayed on website TABLE for user to reference
 
 Selecting a different State will repopulate table with new data
