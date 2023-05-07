@@ -17,4 +17,5 @@ Communication Contract:
 
 REQUEST DATA METHOD:
 
+
 RECEIVE DATA METHOD:
