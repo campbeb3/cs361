@@ -10,3 +10,6 @@ http://flip2.engr.oregonstate.edu:54545/
 
 JSON Source: https://corgis-edu.github.io/corgis/json/state_crime/
 
+REQUEST DATA METHOD:
+
+RECEIVE DATA METHOD:
