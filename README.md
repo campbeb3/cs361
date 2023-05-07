@@ -11,7 +11,7 @@ http://flip2.engr.oregonstate.edu:54545/
 Brian's Project Website location:
 http://flip2.engr.oregonstate.edu:54555/
 
-JSON Source: https://corgis-edu.github.io/corgis/json/state_crime/
+JSON Source (only used year 2019 from this file): https://corgis-edu.github.io/corgis/json/state_crime/
 
 Communication Contract:
 
