@@ -37,6 +37,11 @@ Step 5: Copy over any needed files (JSON, index.hbs, etc) from this Gitbub accou
           i.e. if just want code, copy from the cs361/public_html/views/index.hbs 
           JSON file located: cs361/public_html/public/json
           
+Step 6: Navigate to flip server folder (..\campbeb3\public_html) 
+          At bash terminal commands in VSC: 
+          "nvm use 16.13.0"
+          "alias forever='./node_modules/forever/bin/forever'"
+          "forever start app.js"
      
 
 
