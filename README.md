@@ -15,6 +15,7 @@ JSON Source (only used year 2019 from this file): https://corgis-edu.github.io/c
 
 Communication Contract:
 
+
 REQUEST DATA METHOD:
 
 Log into OSU via ODIN username & password
@@ -22,13 +23,22 @@ Log into OSU via ODIN username & password
 Partner can access Microservice by adding this flip server link to their project: http://flip2.engr.oregonstate.edu:54545/
 Alternatively, if parnter wants to add web build to their project, these are the steps I used:
 
-Step 1: Log into a OSU flip2 server and navigate to your project folder. Follow "Step 0 - Setting Up Node.js" instructions here: https://github.com/osu-cs340-ecampus/nodejs-starter-app
+Step 1: Open VPN connection to OSU (vpn.oregonstate.edu) via Cisco AnyConnect Login (ODIN username & pw).
 
-Step 2: Install Handlebars by running command: "npm i express-handlebars --save"
+Step 2: Log into a OSU flip server and navigate to your project folder. 
 
-Step 3: Copy over any needed files (JSON, index.hbs, etc) from this Gitbub account to appropriate folders for your project.
+Step 3: Follow "Step 0 - Setting Up Node.js" instructions here: https://github.com/osu-cs340-ecampus/nodejs-starter-app
+
+Step 4: Install Handlebars by running command: "npm i express-handlebars --save"
+
+Step 5: Copy over any needed files (JSON, index.hbs, etc) from this Gitbub account to appropriate folders for your project.
+          Identify PORT for flip server you want to use (any number) in app.js
+          
           i.e. if just want code, copy from the cs361/public_html/views/index.hbs 
           JSON file located: cs361/public_html/public/json
+          
+     
+
 
 RECEIVE DATA METHOD:
 
