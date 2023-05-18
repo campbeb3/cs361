@@ -23,7 +23,8 @@ Log into OSU via ODIN username & password
 Partner can access Microservice by adding this flip server link to their project: http://flip2.engr.oregonstate.edu:54545/
 Alternatively, if parnter wants to add web build to their project, these are the steps I used:
 
-Step 1: Open VPN connection to OSU (vpn.oregonstate.edu) via Cisco AnyConnect Login (ODIN username & pw).
+UPDATE: NEED TO REVISE THESE STEPS SINCE I'M ON THE WORNG PATH FOR THIS PROJECT
+Step 1: Will need to revise these steps
 
 Step 2: Log into a OSU flip server and navigate to your project folder. 
 
