@@ -5,22 +5,36 @@ CS361 - Spring 2023
 campbeb3
 Group32 - Microsevice
 
-Microservice Website location (for partner to link to): 
+<h1> ABOUT THE DATA BEING USED </h1>
+Data is sourced from the 2019 FBI Crime Statistics website: https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019
+JSON Source: https://corgis-edu.github.io/corgis/json/state_crime/
+ 
+Microservice Website location (JSON data output for partner to GET): 
 http://flip2.engr.oregonstate.edu:54544/state_crime
 
-Brian's Project Website location:
+
+My Project Website location:
 http://flip2.engr.oregonstate.edu:54555/
 
-JSON Source (only used year 2019 from this file): https://corgis-edu.github.io/corgis/json/state_crime/
 
-Communication Contract:
+<h1> Communication Contract:</h1>
+
+<h2> REQUESTING AND RECEIVING DATA: </h2>
+
+All 50 states are listed as JSON Keys using "State" as primary key and full name of state ie. "Oregon"
+<br>
+The keys to referene type of crime are: <br>
+"Data.Totals.Property" (for property crimes), or "Data.Totals.Violent" (for vilent crimes).
+<br>
+The variables for violent crimes are: "All", "Assault", "Murder", "Rape", "Robbery"
+<br>
+The variables for property crimes are: "All", "Burglary", "Larceny", "Motor"
+<br>
+Partner can access Microservice to get JSON data from: http://flip2.engr.oregonstate.edu:54544/state_crime
 
 
-REQUEST DATA METHOD:
-
-Partner can access Microservice by adding this flip server link to their project: http://flip2.engr.oregonstate.edu:54544/state_crime
 
 
-RECEIVE DATA METHOD:
+
 
 
