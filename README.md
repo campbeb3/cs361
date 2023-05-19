@@ -7,13 +7,16 @@ Group32 - Microsevice
 
 <h1> ABOUT THE DATA BEING USED </h1>
 Data is sourced from the 2019 FBI Crime Statistics website: https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019
+<br>
 JSON Source: https://corgis-edu.github.io/corgis/json/state_crime/
  
 Microservice Website location (JSON data output for partner to GET): 
+<br>
 http://flip2.engr.oregonstate.edu:54544/state_crime
 
 
 My Project Website location:
+<br>
 http://flip2.engr.oregonstate.edu:54555/
 
 
