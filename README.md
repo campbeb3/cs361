@@ -26,8 +26,13 @@ http://flip2.engr.oregonstate.edu:54555/
 
 All 50 states are listed as JSON Keys using "State" as primary key and full name of state ie. "Oregon"
 <br>
-The keys to referene type of crime are: <br>
-"Data.Totals.Property" (for property crimes), or "Data.Totals.Violent" (for vilent crimes).
+The keys to referene type of crime are under "Rates" or "Totals": 
+<br>
+Example for using "Totals" key:
+<br>
+"Data.Totals.Property" (for property crimes)
+<br>
+"Data.Totals.Violent" (for vilent crimes).
 <br>
 The variables for violent crimes are: "All", "Assault", "Murder", "Rape", "Robbery"
 <br>
@@ -35,7 +40,8 @@ The variables for property crimes are: "All", "Burglary", "Larceny", "Motor"
 <br>
 Partner can access Microservice to get JSON data from: http://flip2.engr.oregonstate.edu:54544/state_crime
 
-
+Example JSON data for Oregon:
+{"State":"Oregon","Year":2019,"Data":{"Population":4217737,"Rates":{"Property":{"All":2730.6,"Burglary":349.1,"Larceny":2021.5,"Motor":360},"Violent":{"All":284.4,"Assault":185.5,"Murder":2.8,"Rape":42.2,"Robbery":54}},"Totals":{"Property":{"All":115170,"Burglary":14724,"Larceny":85261,"Motor":15185},"Violent":{"All":11995,"Assault":7825,"Murder":116,"Rape":1778,"Robbery":2276}}}},
 
 
 
