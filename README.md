@@ -47,4 +47,5 @@ Example JSON data for Oregon:
 
 
 
-![UML-request](https://github.com/campbeb3/cs361/assets/86080337/807257eb-9de8-4208-9550-34f909cc6d54)
+![UML_request_diagram](https://github.com/campbeb3/cs361/assets/86080337/39c7646a-352c-4361-9d23-896e2062f7c7)
+
