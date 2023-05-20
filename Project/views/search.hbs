@@ -1,4 +1,4 @@
-<!DOCState html>
+
 <html>
 <head>
     <title>CrimeTracker-Search</title>
@@ -7,6 +7,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script href="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 </head>
 <body>
 	<div title="Back button">
@@ -106,7 +108,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div><br>
+            <div title="test_api">
+            <!--a href="/test_api"><img class="button" src="./img/Back.png"></a></div-->
+            <input id = "testButton" value="get_api">
+        </div>
 </body>
 
 
@@ -144,47 +150,56 @@
         let filterData = arrData.filter(function(value) {
             return value.State === State;
         });
-        
+        //console.log(State);
+
         $('#sel1').empty().append();
         $.each(filterData, function (index, value) {
             // Now, fill the second box with All Violent Crimes
             $('#sel1').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Violent.All) + '</option>');
         });
+
         $('#sel2').empty().append();
         $.each(filterData, function (index, value) {
             // Now, fill the second box with Assault Violent Crimes
             $('#sel2').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Violent.Assault) + '</option>');
         });
+
         $('#sel3').empty().append();
         $.each(filterData, function (index, value) {
             // Now, fill the second box with Murder Violent Crimes
             $('#sel3').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Violent.Murder) + '</option>');
         });
+
         $('#sel4').empty().append();
         $.each(filterData, function (index, value) {
             // Now, fill the second box with Rape Violent Crimes
             $('#sel4').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Violent.Rape) + '</option>');
         });
+
         $('#sel5').empty().append();
         $.each(filterData, function (index, value) {
             // Now, fill the second box with Robbery Violent Crimes
             $('#sel5').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Violent.Robbery) + '</option>');
         });
+
         $('#sel6').empty().append();
         $.each(filterData, function (index, value) {
             // Now, fill the second box with All Property Crimes
             $('#sel6').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Property.All) + '</option>');
         });
+
         $('#sel7').empty().append();
         $.each(filterData, function (index, value) {
             // Now, fill the second box with Burglary Property Crimes
             $('#sel7').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Property.Burglary) + '</option>');
         });
+
         $('#sel8').empty().append();
         $.each(filterData, function (index, value) {
             // Now, fill the second box with Larceny Property Crimes
             $('#sel8').append('<option value="' + value + '">' + JSON.stringify(value.Data.Totals.Property.Larceny) + '</option>');
         });
+
         $('#sel9').empty().append();
         $.each(filterData, function (index, value) {
             // Now, fill the second box with Motor Property Crimes
@@ -192,10 +207,79 @@
         });
 
 
+/*
+    //$('#testButton').click(function(){(abbrState(State, 'abbr'))});
+        const button = document.getElementById('testButton');
+        button.addEventListener('click', function(e) {
+        console.log('button was clicked');
+        const data = new URLSearchParams();
+
+        testState = abbrState(State, 'abbr');
+        data.append('state',testState);
+        data.append('var_code','S1701_C03_001E');
+
+        
+        fetch('/test_api', {method: 'POST', body: data})
+            .then(function(response) {
+            if(response.ok) {
+                console.log('click was recorded');
+                console.log(response)
+                return;
+            }
+            throw new Error('Request failed.');
+            })
+            .catch(function(error) {
+            console.log(error);
+            })
+            .then((result)=>{console.log(result)});
+        });
+*/
+
+        const button = document.getElementById('testButton');
+        button.addEventListener('click', function(e) {
+        console.log('button was clicked');
+        const data = new URLSearchParams();
+
+        testState = abbrState(State, 'abbr');
+        data.append('state',testState);
+        //data.append('var_code','S1701_C03_001E');
+
+        url = '/test_api'
+        params = {'state': 'NY', 'var1':'S1701_C03_001E'}
+        url += '?' + ( new URLSearchParams( params ) ).toString();
+
+        //http://flip3.engr.oregonstate.edu:54546/api/data?state=VA&var=S1701_C03_001E
+        //http://flip2.engr.oregonstate.edu:54555/test_api?state=NY&var=S1701_C03_001E
+        fetch(url, {method: 'GET'})
+            .then(function(response) {
+            if(response.ok) {
+                console.log('click was recorded');
+                console.log(response);
+                return;
+            }
+            throw new Error('Request failed.');
+            })
+            .catch(function(error) {
+            console.log(error);
+            })
+            .then((res)=>{console.log(res)});
+            
+        });
+
+/*
+    const request = ( url, params = {}, method = 'GET' ) => { let options = { method };
+        if ( 'GET' === method ) { url += '?' + ( new URLSearchParams( params ) ).toString();
+         } 
+         else { options.body = JSON.stringify( params ); 
+         } 
+         return fetch( url, options ).then( response => response.json() );
+          };
+          const get = ( url, params ) => request( url, params, 'GET' );
+*/
     // INSERT MICROSERVICE HERE
     // First, convert state full name to abbreviation
     // ref for conversion code: https://gist.github.com/calebgrove/c285a9510948b633aa47
-    console.log(State)
+    //console.log(State)
     function abbrState(input, to){
         var states = [
             ['Arizona', 'AZ'],
@@ -266,40 +350,155 @@
             }    
         }
     }
-        console.log(abbrState(State, 'abbr'))
-        //access partner's website to get the percentages for each variable
-        const arrUrl = 'http://flip3.engr.oregonstate.edu:54546/api/data?state=';
+    console.log(abbrState(State, 'abbr'))
+
+
+    //access partner's website to get the percentages for each variable
+
+    // ref: https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/
+    // http://flip3.engr.oregonstate.edu:54546/api/data?state=VA&var=S1701_C03_001E
+
+
+// send the rendered view to the client
+    /*res.render('')
+
+    // if a callback is specified, the rendered HTML string has to be sent explicitly
+    res.render('index', function (err, html) {
+    res.send(html)
+    })
+
+    // pass a local variable to the view
+    res.render('user', { name: 'state' }, function (err, html) {
+    // ...
+    })
+
+    //Add ONCLICK button
+
+    res.send(Buffer.from('whoop'))
+    res.send({ some: 'json' })
+    res.send('<p>some html</p>')
+    res.status(404).send('Sorry, we cannot find that!')
+    res.status(500).send({ error: 'something blew up' })
+*/
+
+
+    //AJAX METHOD
+/*
+    var Http = new XMLHttpRequest();
+    var url = 'http://flip3.engr.oregonstate.edu:54546/api/data';
+    Http.open("GET", url);
+    Http.send();
+
+    Http.onreadystatechange=(e)=>{
+        console.log(Http.responseText)
+    }
+*/
+
+/*
+    //$.ajax
+    var Url='http://flip3.engr.oregonstate.edu:54546/api/data';
+    $('#sel11').change(function(){
+        $.ajax({
+            url: Url,
+            type:"GET",
+            success: function(result){
+                console.log(result)
+            },
+            error:function(error){
+                console.log(`Error ${error}`)
+            }
+        })
+    })
+*/
+
+/*
+    let Url = 'http://flip3.engr.oregonstate.edu:54546/api';
+    axios.get(Url)
+    .then(data=>console.log(data))
+    .catch(err=>console.log(err))
+*/
+
+
+/*
+    // with params
+    let Url = 'http://flip3.engr.oregonstate.edu:54546/api/data?';
+    let params={
+        state:"AR"
+    }
+    axios.get(Url,params)
+    .then(data=>console.log(data))
+    .catch(err=>console.log(err))
+    
+    
+/*
+    let Url = 'http://flip3.engr.oregonstate.edu:54546/api/data?';
+    let Data={
+        state:"AR",
+        var_name: "S1701_C03_001E" 
+    };
+    //optional params
+    let othePram={
+        headers:{
+            "content-type":"application/json; charset=UTF-8"
+        },
+        body:Data,
+        method:"POST"
+    };
+
+    fetch(Url,othePram)
+    .then(data=>{return data.json()})
+    .then(res=>{console.log(res)})
+    .catch(error=>console.log(error))
+*/
+
+
+
+
+/*
+        //Partner's json location:
+        var arrUrl = 'http://flip3.engr.oregonstate.edu:54546/api/data?state=';
+
         //convert full state name to state abbreviation
         let arrState = abbrState(State, 'abbr');
+
         //codes for each category
         const arrPoverty = '&var=S1701_C03_001E';
         const arrUnemployment = '&var=S2301_C04_001E';
         const arrIncome = '&var=S1902_C03_001E';
+
         //parse values from provided json data
-        var poverty = $.getJSON(arrUrl + arrState + arrPoverty)
-        var unemployment = $.getJSON(arrUrl + arrState + arrUnemployment)
-        var income = $.getJSON(arrUrl + arrState + arrIncome)
+        var poverty = $.get(arrUrl + arrState + arrPoverty);
+        var unemployment = $.get(arrUrl + arrState + arrUnemployment);
+        var income = $.get(arrUrl + arrState + arrIncome);
+
+        //$('#sel10').empty().append();
+        //$.each(filterData, function (index, value) {
+        //    $('#sel10').append('<option value="' + value + '">' + poverty + '</option>');
+        //});
+        //console.log('#sel10');
 
         $('#sel10').empty().append();
         $.each(filterData, function (index, value) {
             $('#sel10').append('<option value="' + value + '">' + poverty + '</option>');
-            //loadSelect("#value", (arrUrl + arrState + arrPoverty));
         });
-        console.log(sel10);
-        
+        //console.log('#sel10');
+
+
+
         $('#sel11').empty().append();
         $.each(filterData, function (index, value) {
             $('#sel11').append('<option value="' + value + '">' + unemployment + '</option>');
-            //loadSelect("#value", (arrUrl + arrState + arrUnemployment));
         });
-        console.log(sel11);
+        //console.log('#sel11');
+
 
         $('#sel12').empty().append();
         $.each(filterData, function (index, value) {
             $('#sel12').append('<option value="' + value + '">' + income + '</option>');
-            //loadSelect("#value", (arrUrl + arrState + arrIncome));
         });
-        console.log(sel12);
+        //console.log('#sel12');
+
+*/
 
     });
     });
