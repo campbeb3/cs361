@@ -1,19 +1,26 @@
 {
   "name": "cs361",
   "version": "1.0.0",
-  "description": "",
+  "description": "microservice_project_cs361",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "microservice"
-  ],
-  "author": "campbeb3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/campbeb3/cs361.git"
+  },
+  "author": "Brian Campbell campbeb3",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/campbeb3/cs361/issues"
+  },
+  "homepage": "https://github.com/campbeb3/cs361#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
-    "forever": "^4.0.3"
+    "forever": "^4.0.3",
+    "node-fetch": "^2.6.11"
   }
 }
