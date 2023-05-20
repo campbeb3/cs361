@@ -1,16 +1,23 @@
 {
-  "name": "campbeb3-project",
+  "name": "public_html",
   "version": "1.0.0",
-  "main": "index.hbs",
+  "description": "microservice",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
-  "author": "Brian Campbell",
+  "author": "Brian Campbell campbeb3",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "express-handlebars": "^7.0.7",
-    "forever": "^4.0.3"
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.11",
+    "pug": "^3.0.2",
+    "request": "^2.88.2"
   },
-  "description": ""
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
