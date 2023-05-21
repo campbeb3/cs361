@@ -12,6 +12,8 @@ JSON Source: https://corgis-edu.github.io/corgis/json/state_crime/
 <br>
 Microservice Website location (JSON data output for partner to GET): 
 <br>
+http://flip2.engr.oregonstate.edu:54544/
+<br>
 http://flip2.engr.oregonstate.edu:54544/state_crime
 
 
