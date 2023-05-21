@@ -34,7 +34,7 @@ Example for using "Totals" key:
 <br>
 "Data.Totals.Property" (for property crimes)
 <br>
-"Data.Totals.Violent" (for vilent crimes).
+"Data.Totals.Violent" (for violent crimes).
 <br>
 The variables for violent crimes are: "All", "Assault", "Murder", "Rape", "Robbery"
 <br>
