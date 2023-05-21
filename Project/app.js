@@ -81,20 +81,26 @@ app.post('/test_api', async function(req, res)
 });
 */
 
-app.get('/test_api/:state/:var1', async function(req, res)
+app.get('/test_api/:state', async function(req, res)
 { 
+    console.log("request received");
+    console.log(req.params);
     console.log(req);
     //res.render('test_api');
     //const url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state=VA&var=S1701_C03_001E';
-    url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state='+req.params.state+'&var='+req.params.var_code+'';
+    //url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state='+req.params.state+'&var=S1701_C03_001E';
+    //url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state='+req.params.state+'&var=S2301_C04_001E';
+    // GET MEAN HOUSEHOLD INCOME (S1902_C03_001E)
+    url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state='+req.params.state+'&var=S1902_C03_001E';
+    console.log("url is:"+url);
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
+    console.log("data is:"+data);
     //console.log(req.body); 
-    console.log(req.params);  
+    //console.log(req.params);  
     //console.log(res);
-    return res.render('test_api');
-    //return
+    //return res.render('test_api');
+    return res.json(data);
 });
 
 
@@ -113,7 +119,7 @@ app.get('/results_list', function(req, res)
 
 //HANDLE INVALID RESULTS
 app.get('*', (req, res) => {
-    res.send('404! This is an invalid URL.');
+    res.send('404! This is Brian and this is an invalid URL.');
   });
 
 
