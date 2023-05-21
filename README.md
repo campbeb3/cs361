@@ -45,6 +45,7 @@ Partner can access Microservice to get JSON data from: http://flip2.engr.oregons
 Example JSON data for Oregon:
 {"State":"Oregon","Year":2019,"Data":{"Population":4217737,"Rates":{"Property":{"All":2730.6,"Burglary":349.1,"Larceny":2021.5,"Motor":360},"Violent":{"All":284.4,"Assault":185.5,"Murder":2.8,"Rape":42.2,"Robbery":54}},"Totals":{"Property":{"All":115170,"Burglary":14724,"Larceny":85261,"Motor":15185},"Violent":{"All":11995,"Assault":7825,"Murder":116,"Rape":1778,"Robbery":2276}}}},
 
+UML Diagram:
 ![UML_request_diagram](https://github.com/campbeb3/cs361/assets/86080337/b15c78b4-1060-47c2-8c98-4d99453fc434)
 
 
