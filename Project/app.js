@@ -28,102 +28,56 @@ const e = require('express');
 app.engine('.hbs', engine({extname: ".hbs"}));  // Create an instance of the handlebars engine to process templates
 app.set('view engine', '.hbs');                 // Tell express to use the handlebars engine whenever it encounters a *.hbs file.
 
-/*ROUTES*/
-
-
-
-//FETCH JSON DATA FROM PARTNER'S MICROSERVICE
-
-/*
-DOES NOT LIKE:
-*/
-//import fetch from 'node-fetch';
+//*ROUTES*//
 const fetch = require("node-fetch");
-/*
-async function getData() {
-    const url = 'http://flip3.engr.oregonstate.edu:54546/api/data';
-    const response = await fetch(url);
-    const jsonResponse = await response.json();
-    console.log(jsonResponse);
-  } 
-  
-getData();
-*/
 
-
-//RENDER HOME PAGE
+//RENDER HOME PAGE//
 app.get('/', function(req, res)
 { 
     res.render('index');     
 });
 
-//RENDER SEARCH PAGE
+//RENDER SEARCH PAGE//
 app.get('/search', function(req, res)
 { 
     res.render('search');     
 });
-
-/*
-app.post('/test_api', async function(req, res)
-{ 
-    console.log(req);
-    //res.render('test_api');
-    //const url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state=VA&var=S1701_C03_001E';
-    url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state='+req.body.state+'&var='+req.body.var_code+'';
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-    //console.log(req.body); 
-    //console.log(req.params);  
-    console.log(res);
-    return res.render('test_api');
-    //return
-});
-*/
 
 app.get('/test_api/:state', async function(req, res)
 { 
     console.log("request received");
     console.log(req.params);
     console.log(req);
-    //res.render('test_api');
-    //const url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state=VA&var=S1701_C03_001E';
-    //url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state='+req.params.state+'&var=S1701_C03_001E';
-    //url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state='+req.params.state+'&var=S2301_C04_001E';
     // GET MEAN HOUSEHOLD INCOME (S1902_C03_001E)
     url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state='+req.params.state+'&var=S1902_C03_001E';
     console.log("url is:"+url);
     const response = await fetch(url);
     const data = await response.json();
     console.log("data is:"+data);
-    //console.log(req.body); 
-    //console.log(req.params);  
-    //console.log(res);
-    //return res.render('test_api');
     return res.json(data);
 });
 
 
 
-//RENDER RESULTS PAGE
+//RENDER RESULTS PAGE//
 app.get('/results', function(req, res)
 { 
     res.render('results');     
 });
 
-//RENDER RESULTS_LIST PAGE
+//RENDER RESULTS_LIST PAGE//
 app.get('/results_list', function(req, res)
 { 
     res.render('results_list');     
 });
 
-//HANDLE INVALID RESULTS
+//HANDLE INVALID RESULTS/
 app.get('*', (req, res) => {
     res.send('404! This is Brian and this is an invalid URL.');
   });
 
 
-/*LISTENER*/
+//*LISTENER*//
 app.listen(PORT, function(){            // This is the basic syntax for what is called the 'listener' which receives incoming requests on the specified PORT.
     console.log('Express started on http://localhost:' + PORT + '; press Ctrl-C to terminate.')
 });
