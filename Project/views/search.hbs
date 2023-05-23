@@ -223,8 +223,6 @@
          $(document).ready(function() {
             $("#testButton").click(function(event){
                $.getJSON(url, function(jd) {
-                  //$('#sel10').html('<p> State: ' + jd.state + '</p>');
-                  //$('#sel11').append('<p>Code : ' + jd.var_name+ '</p>');
                   $('#sel10').html('<p>'+jd.state+'</p>');
                   $('#sel11').append('<p>$'+jd.value+'</p>');
                });
