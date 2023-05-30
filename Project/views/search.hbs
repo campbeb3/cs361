@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>CrimeTracker-Search</title>
-    Access-Control-Allow-Origin
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script href="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
@@ -106,7 +105,6 @@
         </table>
     </div><br>
             <div title="test_api">
-            <!--a href="/test_api"><img class="button" src="./img/Back.png"></a></div-->
             <input id = "testButton" value="Get API">
         </div>
 </body>
@@ -129,16 +127,12 @@
     
         // Remove duplicates. We want unique States.
         arr_State = Array.from(new Set (arr_State));
-        
-        // ref (https://www.encodedna.com/javascript/remove-duplicates-in-javascript-array-using-es6-set-and-from.htm)
-
         $.each(arr_State, function (index, value) {
-            // Fill the first dropdown with unique States.
+            // Fill the first dropdown with State names
             $('#sel0').append('<option value="' + value + '">' + value + '</option>');
         });
                 
     });
-
 
     $('#sel0').change(function () {
         let State = this.options[this.selectedIndex].value;
@@ -146,7 +140,6 @@
         let filterData = arrData.filter(function(value) {
             return value.State === State;
         });
-        //console.log(State);
 
         $('#sel1').empty().append();
         $.each(filterData, function (index, value) {
@@ -204,19 +197,19 @@
 
         //FETCH data from backend
         const button = document.getElementById('testButton');
-        button.addEventListener('click', logJSONData);
+        const elemEventHandler = logJSONData();
+        //button.addEventListener('click', logJSONData);
+        button.addEventListener('click', elemEventHandler, false);
 
         function logJSONData(e) {
             StateCode = abbrState(State, 'abbr');
             url = '/test_api'
             url += '/'+StateCode
-            var Http = new XMLHttpRequest();
-            Http.open("GET", url);
-            Http.send();
-
-            Http.onreadystatechange=(e)=>{
-            console.log(Http.responseText)
-            }
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", url);
+            xhttp.send();
+            xhttp.onreadystatechange=(e)=>{
+            } 
         }
 
         //OUTPUT mean household income to project page 
@@ -224,14 +217,14 @@
             $("#testButton").click(function(event){
                $.getJSON(url, function(jd) {
                   $('#sel10').html('<p>'+jd.state+'</p>');
-                  $('#sel11').append('<p>$'+jd.value+'</p>');
+                  $('#sel11').html('<p>$'+jd.value+'</p>');
                });
             });
-               
+              
          });
 
-    // CONVERT state full name to abbreviation
-    // ref for conversion code: https://gist.github.com/calebgrove/c285a9510948b633aa47
+    // CONVERT state name to abbreviation
+    // ref: https://gist.github.com/calebgrove/c285a9510948b633aa47
     function abbrState(input, to){
         var states = [
             ['Arizona', 'AZ'],
@@ -306,16 +299,13 @@
 
     });
     });
-    
-    
+
 </script>
-
-
-
-  <br><br>
-  <div title="More information">
-  <a href="https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019"><img src="./img/FBI.png"></a><br>
-  </div>
-  <br>
-  <a href="/"><img src="./img/Home_icon.png"></a><a href="/search"><img src="./img/Search_Search.png"></a><a href="/results"><img src="./img/Results_icon.png"></a><a href="/results_list"><img src="./img/List_icon.png"></a>
+<br>
+<button onclick="window.print();" class="noPrint">
+Print Me
+</button>
+<br><br>
+  
+  <a href="/"><img src="./img/Home_icon.png"></a><a href="/search"><img src="./img/Search_Search.png"></a><a href="/feedback"><img src="./img/Results_icon.png"></a><a href="/results_list"><img src="./img/List_icon.png"></a>
 </html>
