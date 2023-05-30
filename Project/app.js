@@ -45,24 +45,24 @@ app.get('/search', function(req, res)
 
 app.get('/test_api/:state', async function(req, res)
 { 
-    console.log("request received");
-    console.log(req.params);
-    console.log(req);
+    //console.log("request received");
+    //console.log(req.params);
+    //console.log(req);
     // GET MEAN HOUSEHOLD INCOME (S1902_C03_001E)
     url = 'http://flip3.engr.oregonstate.edu:54546/api/data?state='+req.params.state+'&var=S1902_C03_001E';
-    console.log("url is:"+url);
+    //console.log("url is:"+url);
     const response = await fetch(url);
     const data = await response.json();
-    console.log("data is:"+data);
+    //console.log("data is:"+data);
     return res.json(data);
 });
 
 
 
-//RENDER RESULTS PAGE//
-app.get('/results', function(req, res)
+//RENDER FEEDBACK PAGE//
+app.get('/feedback', function(req, res)
 { 
-    res.render('results');     
+    res.render('feedback');     
 });
 
 //RENDER RESULTS_LIST PAGE//
@@ -70,6 +70,7 @@ app.get('/results_list', function(req, res)
 { 
     res.render('results_list');     
 });
+
 
 //HANDLE INVALID RESULTS/
 app.get('*', (req, res) => {
